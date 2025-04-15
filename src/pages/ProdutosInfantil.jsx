@@ -1,30 +1,24 @@
 import React from 'react';
 
-const produtos = [
+const produtosInfantil = [
   {
     id: 1,
-    nome: 'Tênis Esportivo',
-    preco: 'R$ 199,90',
-    imagem: 'https://picsum.photos/200/200?random=1',
+    nome: 'Camiseta Infantil',
+    preco: 'R$ 49,90',
+    imagem: 'https://via.placeholder.com/200x200?text=Camiseta+Infantil',
   },
   {
     id: 2,
-    nome: 'Jaqueta Masculina',
-    preco: 'R$ 249,90',
-    imagem: 'https://picsum.photos/200/200?random=2',
-  },
-  {
-    id: 3,
-    nome: 'Bolsa Feminina',
-    preco: 'R$ 149,90',
-    imagem: 'https://picsum.photos/200/200?random=3',
+    nome: 'Tênis Infantil',
+    preco: 'R$ 119,90',
+    imagem: 'https://via.placeholder.com/200x200?text=Tenis+Infantil',
   },
 ];
 
-function Home() {
+function ProdutosInfantil() {
   return (
     <div style={styles.grid}>
-      {produtos.map((item) => (
+      {produtosInfantil.map((item) => (
         <div key={item.id} style={styles.card}>
           <img src={item.imagem} alt={item.nome} style={styles.imagem} />
           <h3>{item.nome}</h3>
@@ -65,4 +59,4 @@ const styles = {
   },
 };
 
-export default Home;
+export default ProdutosInfantil;

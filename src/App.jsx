@@ -1,15 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './pages/home';
+import Produtos from './pages/Produtos';
+import Carrinho from './pages/Carrinho';
+import PaginaNaoEncontrada from './pages/PaginaNaoEncontrada';
+
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-     <Home />
-      <main style={{ padding: '2rem' }}>
-        <h2>Bem-vindo à nossa loja online!</h2>
-        <p>Confira as melhores ofertas em roupas, calçados e acessórios.</p>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos" element={<Produtos />} />
+          <Route path="/carrinho" element={<Carrinho />} />
+
+          <Route path="*" element={<PaginaNaoEncontrada />} />
+
+
+        </Routes>
       </main>
-    </div>
+    </Router>
   );
 }
 

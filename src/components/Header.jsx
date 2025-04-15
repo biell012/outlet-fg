@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -6,9 +7,9 @@ function Header() {
       <h1 style={styles.logo}>Outlet FG</h1>
       <nav>
         <ul style={styles.menu}>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Produtos</a></li>
-          <li><a href="#">Carrinho</a></li>
+          <li><Link to="/">Início</Link></li>
+          <li><Link to="/produtos">Produtos</Link></li>
+          <li><Link to="/carrinho">Carrinho</Link></li>
         </ul>
       </nav>
     </header>
